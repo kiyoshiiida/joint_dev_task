@@ -5,19 +5,14 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-# 取り消し puts ["田中", "佐藤", "佐々木", "高橋","斎藤"]
+  # 次の配列の最後に "斎藤" を追加し，出力して下さい。
+  # 誤 puts ["田中", "佐藤", "佐々木", "高橋","斎藤"]
 names <<"斎藤"
 puts names
 end
 
 def q2
-  array1 = ["dog", "cat", "fish"]
-  array2 = ["bird", "bat", "tiger"]
-
-  # 以下に回答を記載
-array = array1 + array2
-puts array
-end
+ 
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
@@ -37,7 +32,14 @@ def q4
   # 以下は変更しないで下さい
   p sports
 end
+ array1 = ["dog", "cat", "fish"]
+  array2 = ["bird", "bat", "tiger"]
 
+  # 以下に回答を記載
+  # 次の二つの配列を合体させた新しい配列 array を作成し，出力して下さい。
+  array = array1 + array2
+puts array
+end
 def q5
   array1 = []
   array2 = [1, 5, 8, 10]
@@ -55,7 +57,14 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  
+  # 次の配列から，期待された結果の配列 numbers2 を作成し，出力して下さい。
+  # 期待する配列
+  # [10, 20, 30, 40, 50]
+
+  numbers2 = numbers1.map do |x|
+    x * 10
+  end
+  p numbers2
 
 end
 
@@ -63,6 +72,7 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
+  # 次の配列の要素を 文字列 から 数字 に変換し，出力して下さい。（新しい配列を作成せずに実現して下さい）
   # array = ["1".to_i, "2".to_i, "3".to_i, "4".to_i, "5".to_i]
   # array = ["1", "2", "3", "4", "5"].map(&:to_i)
   array.map!(&:to_i)
@@ -75,6 +85,14 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
+  # ["Ruby", "Php", "Python", "Javascript"]
+  # ["RUBY", "PHP", "PYTHON", "JAVASCRIPT"]
+
+upper_case_programming_languages =%W(ruby php python japascript)
+
+
+
+
 
   # 以下は変更しないで下さい
   p programming_languages
@@ -85,6 +103,15 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
+  #   期待結果
+  # 会員No.1 田中さん
+  # 会員No.2 佐藤さん
+  # 会員No.3 佐々木さん
+  # 会員No.4 高橋さん
+  names.each.with_index(1) do |name,i|
+    puts "会員No.#{i} #{name}さん"
+end
+
 
 end
 
